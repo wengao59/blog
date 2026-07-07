@@ -1,0 +1,102 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+#
+# If you need help with YAML syntax, here are some quick references for you:
+# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
+# https://learnxinyminutes.com/docs/yaml/
+#
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
+title: Wen Gao's Blog
+email: iamgwen9@gmail.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Welcome to my blog! My name is Wen Gao. I'm currently a graduate student at Shanghai Jiao Tong University, majoring in Computer Science. I'm interested in computer systems research. I will share things about computer science, mathematics, movies, music, and my life in this blog. Hope you enjoy it!
+baseurl: "/blog" # the subpath of your site, e.g. /blog
+url: "https://wengao59.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+# twitter_username: jekyllrb
+github_username: wengao59
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+nav_pages:
+  - index.markdown # 博客主页（最左边）
+  - tags.markdown
+  - categories.markdown
+  - series.markdown
+  - archive.markdown
+  - friends.markdown
+  - about.markdown
+
+# 首页是否显示文章摘要
+show_excerpts: true
+
+# 网站作者信息
+author:
+  name: Wen Gao
+  email: iamgwen9@gmail.com
+
+# 社交媒体链接
+social_links:
+  - title: GitHub
+    icon: github
+    url: "https://github.com/wengao59"
+  - title: 知乎
+    icon: zhihu
+    url: "https://www.zhihu.com/people/mvsftq"
+
+# Google Analytics（统计）
+google_analytics: G-NNNNNNNNNN
+# The former `UA-NNNNNNNN-N` format is no longer supported by Google
+
+# giscus 评论系统配置
+comments:
+  provider: "giscus" # 或者 "giscus" 如果主题这么要求
+  giscus:
+    repo: "wengao59/blog" # 对应 data-repo
+    repo_id: "R_kgDOTPS5Tg" # 对应 data-repo-id
+    category: "Announcements" # 对应 data-category
+    category_id: "DIC_kwDOTPS5Ts4DAn3X" # 对应 data-category-id
+    mapping: "pathname" # 对应 data-mapping
+    strict: "0" # 对应 data-strict
+    reactions_enabled: "1" # 对应 data-reactions-enabled
+    emit-metadata: "0" # 对应 data-emit-metadata
+    input_position: "bottom" # 对应 data-input-position
+    lang: "zh-CN" # 语言
+    data-theme: "preferred-color-scheme" # 对应 data-theme
+    crossorigin: "anonymous" # 对应 data-crossorigin
+
+
+# Exclude from processing.
+# The following items will not be processed, by default.
+# Any item listed under the `exclude:` key here will be automatically added to
+# the internal "default list".
+#
+# Excluded items can be processed by explicitly listing the directories or
+# their entries' file path in the `include:` list.
+#
+# exclude:
+#   - .sass-cache/
+#   - .jekyll-cache/
+#   - gemfiles/
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules/
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
