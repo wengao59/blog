@@ -34,3 +34,6 @@ gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 
 # seo friendly
 gem 'jekyll-seo-tag'
+
+# sitemap generator
+gem "jekyll-sitemap"

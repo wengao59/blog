@@ -32,6 +32,7 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-sitemap
 
 header_pages:
   - index.markdown # 博客主页（最左边）
@@ -63,23 +64,10 @@ social_links:
 google_analytics: G-S3T0SVRC5B
 # The former `UA-NNNNNNNN-N` format is no longer supported by Google
 
-# giscus 评论系统配置
-comments:
-  provider: "giscus" # 或者 "giscus" 如果主题这么要求
-  giscus:
-    repo: "wengao59/blog" # 对应 data-repo
-    repo_id: "R_kgDOTPS5Tg" # 对应 data-repo-id
-    category: "Announcements" # 对应 data-category
-    category_id: "DIC_kwDOTPS5Ts4DAn3X" # 对应 data-category-id
-    mapping: "pathname" # 对应 data-mapping
-    strict: "0" # 对应 data-strict
-    reactions_enabled: "1" # 对应 data-reactions-enabled
-    emit-metadata: "0" # 对应 data-emit-metadata
-    input_position: "bottom" # 对应 data-input-position
-    lang: "zh-CN" # 语言
-    data-theme: "preferred-color-scheme" # 对应 data-theme
-    crossorigin: "anonymous" # 对应 data-crossorigin
-
+# # giscus 评论系统配置
+# comments:
+#   provider: "giscus" # 或者 "giscus" 如果主题这么要求
+comments: true
 
 # Exclude from processing.
 # The following items will not be processed, by default.

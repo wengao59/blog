@@ -1,22 +1,40 @@
-{% if site.comments.provider == "giscus" %}
-<!-- Giscus Comments -->
-<div id="comments" class="mt-5">
-  <h4 class="font-weight-bold mb-4">留言</h4>
-  <script
-    src="https://giscus.app/client.js"
-    data-repo="{{ site.comments.giscus.repo }}"
-    data-repo-id="{{ site.comments.giscus.repo_id }}"
-    data-category="{{ site.comments.giscus.category }}"
-    data-category-id="{{ site.comments.giscus.category_id }}"
-    data-mapping="{{ site.comments.giscus.mapping }}"
-    data-strict="{{ site.comments.giscus.strict }}"
-    data-reactions-enabled="{{ site.comments.giscus.reactions_enabled }}"
-    data-emit-metadata="{{ site.comments.giscus.emit-metadata }}"
-    data-input-position="{{ site.comments.giscus.input_position }}"
-    data-theme="{{ site.comments.giscus.data-theme }}"
-    data-lang="{{ site.comments.giscus.lang }}"
-    crossorigin="{{ site.comments.giscus.crossorigin }}"
-    async
-  ></script>
+<!-- 1. 先在页面中放置一个安全的容器 -->
+<div id="giscus-comments-container">
+  <p style="color: #888; text-align: center; padding: 1rem">⏳ 评论加载中...</p>
 </div>
-{% endif %}
+
+<!-- 2. 使用与 Disqus 完全相同的动态加载模式 -->
+<script>
+  (function () {
+    // 创建一个新的 script 标签
+    var script = document.createElement("script");
+    script.src = "https://giscus.app/client.js";
+
+    // 配置 Giscus 的所有参数
+    script.setAttribute("data-repo", "wengao59/blog");
+    script.setAttribute("data-repo-id", "R_kgDOTPS5Tg");
+    script.setAttribute("data-category", "Announcements");
+    script.setAttribute("data-category-id", "DIC_kwDOTPS5Ts4DAn3X");
+    script.setAttribute("data-mapping", "pathname");
+    script.setAttribute("data-strict", "0");
+    script.setAttribute("data-reactions-enabled", "1");
+    script.setAttribute("data-emit-metadata", "0");
+    script.setAttribute("data-input-position", "bottom");
+    script.setAttribute("data-theme", "preferred_color_scheme");
+    script.setAttribute("data-lang", "zh-CN");
+    script.setAttribute("crossorigin", "anonymous");
+    script.setAttribute("async", "");
+
+    // 获取我们准备好的容器，并将这个新脚本添加到容器中
+    var container = document.getElementById("giscus-comments-container");
+    if (container) {
+      // 清空容器里的“加载中”提示
+      container.innerHTML = "";
+      // 将脚本添加到容器内
+      container.appendChild(script);
+    } else {
+      // 如果容器丢失，作为后备，添加到页面 body 末尾
+      document.body.appendChild(script);
+    }
+  })();
+</script>
