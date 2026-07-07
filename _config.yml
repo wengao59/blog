@@ -33,7 +33,7 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
-nav_pages:
+header_pages:
   - index.markdown # 博客主页（最左边）
   - tags.markdown
   - categories.markdown
@@ -60,7 +60,7 @@ social_links:
     url: "https://www.zhihu.com/people/mvsftq"
 
 # Google Analytics（统计）
-google_analytics: G-NNNNNNNNNN
+google_analytics: G-S3T0SVRC5B
 # The former `UA-NNNNNNNN-N` format is no longer supported by Google
 
 # giscus 评论系统配置
@@ -80,6 +80,8 @@ comments:
     data-theme: "preferred-color-scheme" # 对应 data-theme
     crossorigin: "anonymous" # 对应 data-crossorigin
 
+giscus:
+  repo: wengao59/blog
 
 # Exclude from processing.
 # The following items will not be processed, by default.
