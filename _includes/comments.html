@@ -1,21 +1,22 @@
+{% if site.comments.provider == "giscus" %}
 <!-- Giscus Comments -->
 <div id="comments" class="mt-5">
   <h4 class="font-weight-bold mb-4">留言</h4>
-  <!-- 把 giscus.app 產生的 script 貼在這裡 -->
   <script
     src="https://giscus.app/client.js"
-    data-repo="wengao59/blog"
-    data-repo-id="R_kgDOTPS5Tg"
-    data-category="Announcements"
-    data-category-id="DIC_kwDOTPS5Ts4DAn3X"
-    data-mapping="pathname"
-    data-strict="0"
-    data-reactions-enabled="1"
-    data-emit-metadata="0"
-    data-input-position="bottom"
-    data-theme="preferred_color_scheme"
-    data-lang="zh-CN"
-    crossorigin="anonymous"
+    data-repo="{{ site.comments.giscus.repo }}"
+    data-repo-id="{{ site.comments.giscus.repo_id }}"
+    data-category="{{ site.comments.giscus.category }}"
+    data-category-id="{{ site.comments.giscus.category_id }}"
+    data-mapping="{{ site.comments.giscus.mapping }}"
+    data-strict="{{ site.comments.giscus.strict }}"
+    data-reactions-enabled="{{ site.comments.giscus.reactions_enabled }}"
+    data-emit-metadata="{{ site.comments.giscus.emit-metadata }}"
+    data-input-position="{{ site.comments.giscus.input_position }}"
+    data-theme="{{ site.comments.giscus.data-theme }}"
+    data-lang="{{ site.comments.giscus.lang }}"
+    crossorigin="{{ site.comments.giscus.crossorigin }}"
     async
   ></script>
 </div>
+{% endif %}
