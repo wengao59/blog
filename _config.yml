@@ -80,8 +80,6 @@ comments:
     data-theme: "preferred-color-scheme" # 对应 data-theme
     crossorigin: "anonymous" # 对应 data-crossorigin
 
-giscus:
-  repo: wengao59/blog
 
 # Exclude from processing.
 # The following items will not be processed, by default.
