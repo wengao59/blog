@@ -200,8 +200,9 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
 
-webmaster_verifications:
-  google: google605f27bf54597938
+google_site_verification: UJapM2d84iH6w1FVXFWeXhz_PoqtMDTU3mmNjGfRe1E
+# webmaster_verifications:
+# google: <meta name="google-site-verification" content="UJapM2d84iH6w1FVXFWeXhz_PoqtMDTU3mmNjGfRe1E" />
 #   bing: 1234
 #   alexa: 1234
 #   yandex: 1234
