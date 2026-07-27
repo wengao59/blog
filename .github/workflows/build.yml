@@ -25,7 +25,7 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: "3.2"
-          bundler-cache: true
+          bundler-cache: false # 👈 关键：关掉自动 bundle install
 
       - name: Add Linux platform to lockfile
         run: |
