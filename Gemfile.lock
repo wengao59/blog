@@ -62,6 +62,8 @@ GEM
       open3 (~> 0.2.1)
     jekyll-paginate-v2 (3.0.0)
       jekyll (>= 3.0, < 5.0)
+    jekyll-postfiles (3.1.0)
+      jekyll (>= 3.8.6, < 5)
     jekyll-redirect-from (0.16.0)
       jekyll (>= 3.3, < 5.0)
     jekyll-sass-converter (3.1.0)
@@ -140,6 +142,7 @@ DEPENDENCIES
   jekyll-optional-front-matter
   jekyll-pagefind
   jekyll-paginate-v2
+  jekyll-postfiles
   jekyll-redirect-from
   jekyll-seo-tag
   jekyll-series-links
@@ -178,6 +181,7 @@ CHECKSUMS
   jekyll-pagefind (0.3.3-x64-mingw-ucrt) sha256=542dc32f5516f245ab225b70ee2b2badb65bcb11f93cf9a71e233bff68f5fcfa
   jekyll-pagefind (0.3.3-x86_64-linux-gnu) sha256=ce2b5e53695701a5cbd38a47f6e50aa1320f32fe3dd65be34fedba843b63e1a6
   jekyll-paginate-v2 (3.0.0) sha256=001be6c1963caa41fed9c2f43b0d47201defa0395381eb8830487c1c2fc4f4e3
+  jekyll-postfiles (3.1.0) sha256=315eb9c79e69953a7721c7b02b3370a499fac2479bc42f21ae25336339061651
   jekyll-redirect-from (0.16.0) sha256=6635cae569ef9b0f90ffb71ec014ba977177fafb44d32a2b0526288d4d9be6db
   jekyll-sass-converter (3.1.0) sha256=83925d84f1d134410c11d0c6643b0093e82e3a3cf127e90757a85294a3862443
   jekyll-seo-tag (2.9.0) sha256=0260015a8e1df9bf195cdfb0c675b7b2883fd8cbf12556e1c1cbe36a831c6852

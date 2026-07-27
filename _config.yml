@@ -46,6 +46,7 @@ plugins:
   - jekyll-redirect-from
   - jekyll-ai-visible-content
   - jekyll-paginate-v2
+  - jekyll-postfiles
 
 # 分页配置
 pagination:
