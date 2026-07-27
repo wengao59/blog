@@ -45,7 +45,8 @@ group :jekyll_plugins do
 
   gem "jekyll-ai-visible-content"
   gem 'jekyll-paginate-v2'
-  gem 'jekyll-postfiles'
+  # gem 'jekyll-postfiles'
+  gem 'jekyll-postfiles', github: 'wengao59/jekyll-postfiles', branch: 'master'
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem

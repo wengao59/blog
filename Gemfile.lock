@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/wengao59/jekyll-postfiles.git
+  revision: 56d7c61a33f24f2a0490390483582fd5daca8294
+  branch: master
+  specs:
+    jekyll-postfiles (3.1.0)
+      jekyll (>= 3.8.6, < 5)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -13,12 +21,8 @@ GEM
       http_parser.rb (~> 0)
     eventmachine (1.2.7)
     ffi (1.17.4-x64-mingw-ucrt)
-    ffi (1.17.4-x86_64-linux-gnu)
     forwardable-extended (2.6.0)
     google-protobuf (4.35.1-x64-mingw-ucrt)
-      bigdecimal
-      rake (~> 13.3)
-    google-protobuf (4.35.1-x86_64-linux-gnu)
       bigdecimal
       rake (~> 13.3)
     http_parser.rb (0.8.1)
@@ -57,13 +61,8 @@ GEM
     jekyll-pagefind (0.3.3-x64-mingw-ucrt)
       jekyll (~> 4.4)
       open3 (~> 0.2.1)
-    jekyll-pagefind (0.3.3-x86_64-linux-gnu)
-      jekyll (~> 4.4)
-      open3 (~> 0.2.1)
     jekyll-paginate-v2 (3.0.0)
       jekyll (>= 3.0, < 5.0)
-    jekyll-postfiles (3.1.0)
-      jekyll (>= 3.8.6, < 5)
     jekyll-redirect-from (0.16.0)
       jekyll (>= 3.3, < 5.0)
     jekyll-sass-converter (3.1.0)
@@ -99,8 +98,6 @@ GEM
       jekyll-seo-tag (~> 2.1)
     nokogiri (1.19.4-x64-mingw-ucrt)
       racc (~> 1.4)
-    nokogiri (1.19.4-x86_64-linux-gnu)
-      racc (~> 1.4)
     open3 (0.2.1)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
@@ -115,8 +112,6 @@ GEM
     safe_yaml (1.0.5)
     sass-embedded (1.102.0-x64-mingw-ucrt)
       google-protobuf (~> 4.31)
-    sass-embedded (1.102.0-x86_64-linux-gnu)
-      google-protobuf (~> 4.31)
     terminal-table (3.0.2)
       unicode-display_width (>= 1.1.1, < 3)
     tzinfo (2.0.6)
@@ -129,7 +124,6 @@ GEM
 
 PLATFORMS
   x64-mingw-ucrt
-  x86_64-linux
 
 DEPENDENCIES
   http_parser.rb (~> 0.6.0)
@@ -142,7 +136,7 @@ DEPENDENCIES
   jekyll-optional-front-matter
   jekyll-pagefind
   jekyll-paginate-v2
-  jekyll-postfiles
+  jekyll-postfiles!
   jekyll-redirect-from
   jekyll-seo-tag
   jekyll-series-links
@@ -165,10 +159,8 @@ CHECKSUMS
   em-websocket (0.5.3) sha256=f56a92bde4e6cb879256d58ee31f124181f68f8887bd14d53d5d9a292758c6a8
   eventmachine (1.2.7) sha256=994016e42aa041477ba9cff45cbe50de2047f25dd418eba003e84f0d16560972
   ffi (1.17.4-x64-mingw-ucrt) sha256=f6ff9618cfccc494138bddade27aa06c74c6c7bc367a1ea1103d80c2fcb9ed35
-  ffi (1.17.4-x86_64-linux-gnu) sha256=9d3db14c2eae074b382fa9c083fe95aec6e0a1451da249eab096c34002bc752d
   forwardable-extended (2.6.0) sha256=1bec948c469bbddfadeb3bd90eb8c85f6e627a412a3e852acfd7eaedbac3ec97
   google-protobuf (4.35.1-x64-mingw-ucrt) sha256=0660b716c44a4d3baa5cb648cd95dc7faed87ea92cd08fe92cf9156415b35033
-  google-protobuf (4.35.1-x86_64-linux-gnu) sha256=c786439087512a3fbd199e9897d265b855f951d4027e218ea55e858d45969edd
   http_parser.rb (0.8.1) sha256=9ae8df145b39aa5398b2f90090d651c67bd8e2ebfe4507c966579f641e11097a
   i18n (1.15.2) sha256=00f9eb62412fe593b2a65a97daa75300d37abb8f7202ec748e94b6d46a9dd1b5
   jekyll (4.4.1) sha256=4c1144d857a5b2b80d45b8cf5138289579a9f8136aadfa6dd684b31fe2bc18c1
@@ -179,9 +171,8 @@ CHECKSUMS
   jekyll-mermaid (1.0.0) sha256=1d09b876132cf486ab4b2e6b246593bba24c9c23e0b38172cdad8df4cdb35b05
   jekyll-optional-front-matter (0.3.2) sha256=ecdc061d711472469fcf04da617653b553e914c038a17df3b6a5f6f92aeb761b
   jekyll-pagefind (0.3.3-x64-mingw-ucrt) sha256=542dc32f5516f245ab225b70ee2b2badb65bcb11f93cf9a71e233bff68f5fcfa
-  jekyll-pagefind (0.3.3-x86_64-linux-gnu) sha256=ce2b5e53695701a5cbd38a47f6e50aa1320f32fe3dd65be34fedba843b63e1a6
   jekyll-paginate-v2 (3.0.0) sha256=001be6c1963caa41fed9c2f43b0d47201defa0395381eb8830487c1c2fc4f4e3
-  jekyll-postfiles (3.1.0) sha256=315eb9c79e69953a7721c7b02b3370a499fac2479bc42f21ae25336339061651
+  jekyll-postfiles (3.1.0)
   jekyll-redirect-from (0.16.0) sha256=6635cae569ef9b0f90ffb71ec014ba977177fafb44d32a2b0526288d4d9be6db
   jekyll-sass-converter (3.1.0) sha256=83925d84f1d134410c11d0c6643b0093e82e3a3cf127e90757a85294a3862443
   jekyll-seo-tag (2.9.0) sha256=0260015a8e1df9bf195cdfb0c675b7b2883fd8cbf12556e1c1cbe36a831c6852
@@ -199,7 +190,6 @@ CHECKSUMS
   mercenary (0.4.0) sha256=b25a1e4a59adca88665e08e24acf0af30da5b5d859f7d8f38fba52c28f405138
   minima (2.5.2) sha256=9c434e3b7bc4a0f0ab488910438ed3757a0502ff1060d172f361907fc38aa45a
   nokogiri (1.19.4-x64-mingw-ucrt) sha256=051da97b8eccfdb5444fed40246a35e10d7298b9efe759b4cd25455ea04c587e
-  nokogiri (1.19.4-x86_64-linux-gnu) sha256=379fae440b28915e3f19d752ce2dcf8465ed2b2fbefd2a7ca0dd497bc981a06a
   open3 (0.2.1) sha256=8e2d7d2113526351201438c1aa35c8139f0141c9e8913baa007c898973bf3952
   pathutil (0.16.2) sha256=e43b74365631cab4f6d5e4228f812927efc9cb2c71e62976edcb252ee948d589
   public_suffix (7.0.5) sha256=1a8bb08f1bbea19228d3bed6e5ed908d1cb4f7c2726d18bd9cadf60bc676f623
@@ -211,7 +201,6 @@ CHECKSUMS
   rouge (4.7.0) sha256=dba5896715c0325c362e895460a6d350803dbf6427454f49a47500f3193ea739
   safe_yaml (1.0.5) sha256=a6ac2d64b7eb027bdeeca1851fe7e7af0d668e133e8a88066a0c6f7087d9f848
   sass-embedded (1.102.0-x64-mingw-ucrt) sha256=651e6e99c7bb486c9531b2e1914a264983f8e4fe49a45b00c2303daec51fc25f
-  sass-embedded (1.102.0-x86_64-linux-gnu) sha256=9815b7604123a9a44a65d44d5e58e7af1c7005174b745cda83bad4c9e3760ab3
   terminal-table (3.0.2) sha256=f951b6af5f3e00203fb290a669e0a85c5dd5b051b3b023392ccfd67ba5abae91
   tzinfo (2.0.6) sha256=8daf828cc77bcf7d63b0e3bdb6caa47e2272dcfaf4fbfe46f8c3a9df087a829b
   tzinfo-data (1.2026.3) sha256=478fbc5356f13c1004cf8372b1336f3dad4055c96340fc4c881a3738da8cf7f9
