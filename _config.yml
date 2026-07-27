@@ -21,7 +21,7 @@
 title: Wen Gao's Blog
 email: iamgwen9@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Welcome to my blog! My name is Wen Gao. I'm currently a graduate student at Shanghai Jiao Tong University, majoring in Computer Science. I'm interested in computer systems research. I will share things about computer science, mathematics, movies, music, and my life in this blog. Hope you enjoy it!
+  Things about Computer Science, Music, Movies and Life.
 baseurl: "/blog" # the subpath of your site, e.g. /blog
 url: "https://wengao59.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
@@ -33,15 +33,43 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-archives # 替换 jekyll-index-pages
+  # - jekyll-lunr-js-search
+  # - jekyll-index-pages
+  - jekyll-series-links
+  - jekyll-default-layout
+  - jekyll-optional-front-matter
+  - jekyll-titles-from-headings
+  - jekyll-pagefind
+  - jekyll-toc
+  - jekyll-mermaid
+  - jekyll-redirect-from
+
+mermaid:
+  src: "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"
+
+defaults:
+  - scope:
+      path: "" # 适用于所有文件
+    values:
+      toc: true # 默认开启目录
+
+jekyll_pagefind:
+  output_subdir: pagefind
+
+feed:
+  posts_limit: 50 # 显示 50 篇
 
 header_pages:
   - index.markdown # 博客主页（最左边）
-  - tags.markdown
-  - categories.markdown
-  - series.markdown
-  - archive.markdown
-  - friends.markdown
-  - about.markdown
+  - tags.markdown # 标签
+  - categories.markdown # 分类
+  - series.markdown # 系列
+  - archive.markdown # 归档
+  - projects.markdown # 项目
+  - about.markdown # 关于我
+  - friends.markdown # 友情链接
+  - search.md # 添加这一行
 
 # 首页是否显示文章摘要
 show_excerpts: true
@@ -59,15 +87,98 @@ social_links:
   - title: 知乎
     icon: zhihu
     url: "https://www.zhihu.com/people/mvsftq"
+  - title: B站
+    icon: bilibili
+    url: "https://space.bilibili.com/3691006079797620"
+  - title: 邮件
+    icon: envelope
+    url: "iamgwen9@gmail.com"
+
+# 社交链接（给 Google 结构化数据用）
+social:
+  name: Wen Gao
+  links:
+    - https://github.com/wengao59
+    - https://www.zhihu.com/people/mvsftq
+    - https://space.bilibili.com/3691006079797620
 
 # Google Analytics（统计）
 google_analytics: G-S3T0SVRC5B
 # The former `UA-NNNNNNNN-N` format is no longer supported by Google
 
 # # giscus 评论系统配置
-# comments:
-#   provider: "giscus" # 或者 "giscus" 如果主题这么要求
-comments: true
+comments:
+  provider: "giscus" # 或者 "giscus" 如果主题这么要求
+
+giscus:
+  repo: "wengao59/blog"
+  repo-id: "R_kgDOTPS5Tg"
+  category: "Announcements"
+  category-id: "DIC_kwDOTPS5Ts4DAn3X"
+  mapping: "pathname"
+# ============================================
+# jekyll-archives 配置
+# ============================================
+# ============================================
+# jekyll-archives 配置（完整版）
+# ============================================
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+    - year
+    - month
+    - day
+
+  layouts:
+    category: archive_category
+    tag: archive_tag
+    year: archive_year
+    month: archive_month
+    day: archive_day
+
+  permalinks:
+    category: /categories/:name/
+    tag: /tags/:name/
+    year: /archive/:year/
+    month: /archive/:year/:month/
+    day: /archive/:year/:month/:day/
+
+# # ============================================
+# # jekyll-index-pages 配置（自动生成分类/标签/归档）
+# # ============================================
+# index_pages:
+#   categories:
+#     enabled: true
+#     title: "分类"
+#     layout: "page" # 使用 page 布局
+#     permalink: "/categories/"
+
+#   tags:
+#     enabled: true
+#     title: "标签"
+#     layout: "page"
+#     permalink: "/tags/"
+
+#   archive:
+#     enabled: true
+#     title: "归档"
+#     layout: "page"
+#     permalink: "/archive/"
+
+# # ============================================
+# # 搜索配置（jekyll-lunr-js-search）
+# # ============================================
+# lunr_search:
+#   # 要索引的页面
+#   pages:
+#     - home
+#     - page
+#     - post
+#     - default
+
+#   # 索引内容的最大字数（超过会被截断）
+#   max_index_size: 1000
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -77,14 +188,24 @@ comments: true
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
 #
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+google_site_verification: google605f27bf54597938
+
+# webmaster_verifications:
+#   google: 1234
+#   bing: 1234
+#   alexa: 1234
+#   yandex: 1234
+#   baidu: 1234
+#   facebook: 1234

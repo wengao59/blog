@@ -1,0 +1,9 @@
+# 工作流的构建任务通常包括：
+
+# actions/checkout：从仓库拉取你的 Jekyll 源代码。
+
+# ruby/setup-ruby：安装你指定的 Ruby 版本。
+
+# 执行 bundle install：安装 Gemfile 中定义的所有插件（包括非白名单插件）。
+
+# 执行 jekyll build：自由地构建你的网站，生成完整的 ./_site 文件夹。

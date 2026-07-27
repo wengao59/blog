@@ -1,0 +1,10 @@
+# 允许所有爬虫
+User-agent: *
+Allow: /
+
+# 禁止爬取这些目录
+Disallow: /assets/
+Disallow: /js/
+
+# 站点地图位置
+Sitemap: https://wengao59.github.io/blog/sitemap.xml

@@ -4,15 +4,17 @@ title: 关于
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+## 关于我
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+我是 Wen Gao，一名 [你的职业/身份]。
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+这个博客主要记录：
+- 计算机科学与技术学习笔记
+- 音乐、电影和生活感悟
 
+## 联系方式
 
-[jekyll-organization]: https://github.com/jekyll
+- GitHub：[wengao59](https://github.com/wengao59)
+- 邮箱：iamgwen9@gmail.com
+
+欢迎交流！

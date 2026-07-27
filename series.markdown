@@ -1,28 +1,28 @@
 ---
 layout: page
-title: 系列
+title: 系列文章
 permalink: /series/
 ---
 
-{% assign series_list = "" | split: "" %}
-{% for post in site.posts %}
-  {% if post.series %}
-    {% assign series_list = series_list | push: post.series %}
-  {% endif %}
-{% endfor %}
-{% assign unique_series = series_list | uniq | sort %}
+{% assign series_posts = site.posts | group_by: "series" | sort: "name" %}
 
-{% for series_name in unique_series %}
-  {% assign series_url = "/series/" | append: series_name | slugify | append: "/" %}
-  <h3>
-    <a href="{{ series_url | relative_url }}">
-      {{ series_name }}
-    </a>
-  </h3>
-  <ul>
-    {% assign series_posts = site.posts | where: "series", series_name | sort: 'series_order' | default: 'date' %}
-    {% for post in series_posts %}
-      <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
+{% for series in series_posts %}
+  {% if series.name != "" and series.name != nil %}
+    <h2 id="{{ series.name | slugify }}">
+      <a href="{{ "/series/" | relative_url }}{{ series.name | slugify }}/">
+        {{ series.name }}
+      </a>
+      <span style="font-size:0.8rem;color:#999;font-weight:normal;">
+        ({{ series.items | size }} 篇)
+      </span>
+    </h2>
+    <ul>
+      {% for post in series.items %}
+        <li>
+          <time>{{ post.date | date: "%Y-%m-%d" }}</time>
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
 {% endfor %}

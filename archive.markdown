@@ -11,8 +11,9 @@ permalink: /archive/
   <ul>
     {% for post in year_group.items %}
       <li>
-        <time>{{ post.date | date: "%m月%d日" }}</time>
-        <a href="{{ post.url }}">{{ post.title }}</a>
+        <time>{{ post.date | date: "%Y年%m月%d日" }}</time>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        <!-- ↑ 这里必须有 | relative_url -->
       </li>
     {% endfor %}
   </ul>

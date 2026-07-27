@@ -37,3 +37,34 @@ gem 'jekyll-seo-tag'
 
 # sitemap generator
 gem "jekyll-sitemap"
+
+# 分类/标签/归档（二选一）
+# 方案A: 自动生成页面
+gem "jekyll-archives"
+
+# gem "jekyll-index-pages"
+
+# series
+gem "jekyll-series-links"
+
+# default-layout
+gem 'jekyll-default-layout'
+
+# default front-matter
+group :jekyll_plugins do
+  gem 'jekyll-optional-front-matter'
+end
+
+# title from headings
+gem 'jekyll-titles-from-headings'
+
+group :jekyll_plugins do
+  # other jekyll plugins
+  gem 'jekyll-pagefind' # add pagefind plugin
+end
+
+gem 'jekyll-toc'
+
+gem 'jekyll-mermaid'
+
+gem 'jekyll-redirect-from'

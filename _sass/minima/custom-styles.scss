@@ -1,0 +1,11 @@
+/* 让独立公式居中，上下留白 */
+.katex-display {
+        margin: 1.5em 0;
+        overflow-x: auto;
+        overflow-y: hidden;
+}
+
+/* 行内公式和文字对齐 */
+.katex {
+        font-size: 1.05em;
+}
