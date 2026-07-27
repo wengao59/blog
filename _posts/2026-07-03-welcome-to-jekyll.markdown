@@ -10,6 +10,7 @@ toc: true
 description: "这是 Jekyll 系列教程的第一篇，介绍基本概念"   # 自定义描述
 author: Wen Gao
 comments: true
+last_modified_at: 2026-07-27
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 

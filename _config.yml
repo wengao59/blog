@@ -44,6 +44,30 @@ plugins:
   - jekyll-toc
   - jekyll-mermaid
   - jekyll-redirect-from
+  - jekyll-ai-visible-content
+  - jekyll-paginate-v2
+
+# 分页配置
+pagination:
+  enabled: true
+  per_page: 10 # 每页显示 10 篇文章
+  permalink: "/page/:num/" # 分页 URL，如 /page/2/
+  title: " - 第 :num 页"
+  limit: 0 # 0 = 显示所有文章
+
+# Auto Pages 功能：自动为分类/标签生成分页页面
+autopages:
+  enabled: true
+  categories:
+    enabled: true
+    title: "分类 - :cat"
+    permalink: "/categories/:cat/page/:num/"
+  tags:
+    enabled: true
+    title: "标签 - :tag"
+    permalink: "/tags/:tag/page/:num/"
+  collections:
+    enabled: false
 
 mermaid:
   src: "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"
@@ -208,3 +232,14 @@ google_site_verification: UJapM2d84iH6w1FVXFWeXhz_PoqtMDTU3mmNjGfRe1E
 #   yandex: 1234
 #   baidu: 1234
 #   facebook: 1234
+
+ai_visible_content:
+  entity:
+    name: "Wen Gao"
+    job_title: "CS Graduate / Blog Writer"
+    description: "Writing about Computer Science, Music, Movies and Life."
+    same_as:
+      - https://github.com/wengao59
+      - https://www.zhihu.com/people/mvsftq
+  crawlers:
+    generate_robots_txt: false

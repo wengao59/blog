@@ -34,8 +34,15 @@ layout: default
     {% if page.toc %} {% toc %} {% endif %} {{ content }} {% series_links %}
   </div>
 
-  {%- if site.disqus.shortname -%} {%- include disqus_comments.html -%} {%-
-  endif -%}
+  <!-- 评论 -->
+  {% if site.comments.provider == "giscus" %}
+  <div
+    class="giscus-wrapper"
+    style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #e8e8e8"
+  >
+    {% include comments.html %}
+  </div>
+  {% endif %}
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>

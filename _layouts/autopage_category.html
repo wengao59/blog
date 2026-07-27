@@ -1,0 +1,51 @@
+---
+layout: default
+---
+
+<div class="page-content">
+  <div class="wrapper">
+    <h1 class="page-heading">分类：{{ page.autopages.display_name }}</h1>
+    <p>共 {{ paginator.total_posts }} 篇文章</p>
+
+    <ul class="post-list">
+      {% for post in paginator.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%Y年%m月%d日" }}</span>
+        <h3>
+          <a class="post-link" href="{{ post.url | relative_url }}">
+            {{ post.title | escape }}
+          </a>
+        </h3>
+        {% if site.show_excerpts and post.excerpt %}
+          {{ post.excerpt }}
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+
+    <!-- 分页导航 -->
+    {% if paginator.total_pages > 1 %}
+    <div class="pagination" style="display:flex; justify-content:space-between; margin-top:30px;">
+      <span>
+        {% if paginator.previous_page %}
+          <a href="{{ paginator.previous_page_path | relative_url }}">← 上一页</a>
+        {% else %}
+          <span style="color:#ccc;">← 上一页</span>
+        {% endif %}
+      </span>
+      <span>第 {{ paginator.page }} / {{ paginator.total_pages }} 页</span>
+      <span>
+        {% if paginator.next_page %}
+          <a href="{{ paginator.next_page_path | relative_url }}">下一页 →</a>
+        {% else %}
+          <span style="color:#ccc;">下一页 →</span>
+        {% endif %}
+      </span>
+    </div>
+    {% endif %}
+
+    <p style="margin-top:30px;">
+      <a href="{{ "/categories/" | relative_url }}">← 返回所有分类</a>
+    </p>
+  </div>
+</div>
