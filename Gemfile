@@ -32,39 +32,36 @@ gem "wdm", "~> 0.1", :platforms => [:mingw, :x64_mingw, :mswin]
 # do not have a Java counterpart.
 gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 
-# seo friendly
-gem 'jekyll-seo-tag'
-
-# sitemap generator
-gem "jekyll-sitemap"
-
-# 分类/标签/归档（二选一）
-# 方案A: 自动生成页面
-gem "jekyll-archives"
-
-# gem "jekyll-index-pages"
-
-# series
-gem "jekyll-series-links"
-
-# default-layout
-gem 'jekyll-default-layout'
-
 # default front-matter
 group :jekyll_plugins do
   gem 'jekyll-optional-front-matter'
 end
 
-# title from headings
-gem 'jekyll-titles-from-headings'
-
 group :jekyll_plugins do
   # other jekyll plugins
+
+  # title from headings
+  gem 'jekyll-titles-from-headings'
+  # seo friendly
+  gem 'jekyll-seo-tag'
+
+  # sitemap generator
+  gem "jekyll-sitemap"
+
+  # 分类/标签/归档（二选一）
+  # 方案A: 自动生成页面
+  gem "jekyll-archives"
+
+  # gem "jekyll-index-pages"
+
+  # series
+  gem "jekyll-series-links"
+
+  # default-layout
+  gem 'jekyll-default-layout'
   gem 'jekyll-pagefind' # add pagefind plugin
+  gem 'jekyll-toc'
+  gem 'jekyll-mermaid'
+  gem 'jekyll-redirect-from'
 end
 
-gem 'jekyll-toc'
-
-gem 'jekyll-mermaid'
-
-gem 'jekyll-redirect-from'
