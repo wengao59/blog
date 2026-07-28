@@ -47,6 +47,7 @@ plugins:
   - jekyll-ai-visible-content
   - jekyll-paginate-v2
   - jekyll-postfiles
+  - jemoji
 
 # 分页配置
 pagination:
