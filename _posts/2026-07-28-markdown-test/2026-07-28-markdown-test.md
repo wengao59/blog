@@ -196,10 +196,10 @@ $$
 矩阵：
 
 $$
-\begin{pmatrix}
+\begin{bmatrix}
 a & b \\
 c & d
-\end{pmatrix}
+\end{bmatrix}
 $$
 
 ---
