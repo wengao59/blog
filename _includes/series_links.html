@@ -1,0 +1,19 @@
+<!-- _includes/series_links.html -->
+{% if series_posts.size > 1 %}
+<div class="series-nav-custom">
+  <h4>📚 系列：{{ series_name }}</h4>
+  <div class="series-scroll">
+    <ol>
+      {% for post in series_posts %}
+      <li class="{% if post.url == page.url %}current{% endif %}">
+        <a href="{{ post.url | relative_url }}">
+          {% if post.url == page.url %}
+          <strong>▶ {{ post.title }}</strong>
+          {% else %} {{ post.title }} {% endif %}
+        </a>
+      </li>
+      {% endfor %}
+    </ol>
+  </div>
+</div>
+{% endif %}

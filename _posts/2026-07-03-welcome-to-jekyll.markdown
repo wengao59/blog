@@ -2,7 +2,7 @@
 layout: post
 title:  "Welcome to Jekyll!"
 date:   2026-07-03 17:25:19 +0800
-categories: jekyll update
+category: jekyll
 series: "jekyll"
 series_part: 1
 tags: [ruby, jekyll, blog]

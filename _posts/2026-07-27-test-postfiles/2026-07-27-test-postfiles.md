@@ -2,7 +2,7 @@
 title: "测试 jekyll-postfiles"
 date: 2026-07-27 16:00:00 +0800
 layout: post
-categories: test
+category: test
 tags: [test]
 description: "测试文章附件自动复制"
 sitemap: false   # 👈 加这一行，排除出站点地图
