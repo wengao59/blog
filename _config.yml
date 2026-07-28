@@ -106,19 +106,20 @@ author:
   email: iamgwen9@gmail.com
 
 # 社交媒体链接
-social_links:
-  - title: GitHub
-    icon: github
-    url: "https://github.com/wengao59"
-  - title: 知乎
-    icon: zhihu
-    url: "https://www.zhihu.com/people/mvsftq"
-  - title: B站
-    icon: bilibili
-    url: "https://space.bilibili.com/3691006079797620"
-  - title: 邮件
-    icon: envelope
-    url: "iamgwen9@gmail.com"
+minima:
+  social_links:
+    - title: GitHub
+      icon: github
+      url: "https://github.com/wengao59"
+    - title: 知乎
+      icon: zhihu
+      url: "https://www.zhihu.com/people/mvsftq"
+    - title: B站
+      icon: bilibili
+      url: "https://space.bilibili.com/3691006079797620"
+    - title: 邮件
+      icon: envelope
+      url: "mailto:iamgwen9@gmail.com"
 
 # 社交链接（给 Google 结构化数据用）
 social:

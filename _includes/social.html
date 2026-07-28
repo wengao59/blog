@@ -1,0 +1,107 @@
+<style>
+  .social-media-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 12px;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+
+  .social-media-list li {
+    display: inline-block;
+  }
+</style>
+
+<ul class="social-media-list">
+  {%- for entry in site.minima.social_links -%}
+  <li>
+    <a
+      rel="me"
+      href="{{ entry.url }}"
+      target="_blank"
+      title="{{ entry.title }}"
+    >
+      {%- if entry.icon == "zhihu" -%}
+      <!-- 知乎 SVG -->
+      <svg
+        class="grey"
+        xmlns="http://www.w3.org/2000/svg"
+        width="18"
+        height="18"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+      >
+        <path
+          d="M13.38 1.32h-2.76v15.12h2.76V1.32zM17.52 4.56h-2.76v11.88h2.76V4.56zM9.24 4.56H6.48v11.88h2.76V4.56zM21.6 7.8h-2.76v8.64H21.6V7.8zM2.4 7.8H0v8.64h2.4V7.8z"
+        />
+      </svg>
+      {%- elsif entry.icon == "bilibili" -%}
+      <!-- B站 SVG -->
+      <svg
+        class="grey"
+        xmlns="http://www.w3.org/2000/svg"
+        width="18"
+        height="18"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+      >
+        <path
+          d="M17.813 4.653h.854l1.338 1.35v12.78l-1.338 1.35h-14.4l-1.338-1.35V6.003l1.338-1.35h.854l1.408-1.408 1.385 1.408h6.336l1.406-1.408 1.385 1.408zM6.57 8.614v7.08h10.86v-7.08H6.57z"
+        />
+      </svg>
+      {%- elsif entry.icon == "envelope" -%}
+      <!-- 邮箱 SVG -->
+      <svg
+        class="grey"
+        xmlns="http://www.w3.org/2000/svg"
+        width="18"
+        height="18"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+      >
+        <path
+          d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z"
+        />
+        <path
+          d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z"
+        />
+      </svg>
+      {%- elsif entry.icon == "github" -%}
+      <!-- GitHub SVG -->
+      <svg
+        class="grey"
+        xmlns="http://www.w3.org/2000/svg"
+        width="18"
+        height="18"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+      >
+        <path
+          d="M12 .5C5.4.5 0 5.9 0 12.5c0 5.3 3.4 9.8 8.2 11.4.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.6-4-1.6-.5-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2.9-.3 1.9-.4 2.9-.4s2 .1 2.9.4c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.8-1.6 8.2-6.1 8.2-11.4C24 5.9 18.6.5 12 .5z"
+        />
+      </svg>
+      {%- else -%}
+      <span class="grey fa-brands fa-{{ entry.icon }} fa-lg"></span>
+      {%- endif -%}
+    </a>
+  </li>
+  {%- endfor -%} {% unless site.minima.hide_site_feed_link %}
+  <li>
+    <a
+      href="{{ site.feed.path | default: 'feed.xml' | absolute_url }}"
+      target="_blank"
+      title="Subscribe to syndication feed"
+    >
+      <svg class="svg-icon grey" viewbox="0 0 16 16" width="18" height="18">
+        <path
+          d="M12.8 16C12.8 8.978 7.022 3.2 0 3.2V0c8.777 0 16 7.223 16 16h-3.2zM2.194
+            11.61c1.21 0 2.195.985 2.195 2.196 0 1.21-.99 2.194-2.2 2.194C.98 16 0 15.017 0
+            13.806c0-1.21.983-2.195 2.194-2.195zM10.606
+            16h-3.11c0-4.113-3.383-7.497-7.496-7.497v-3.11c5.818 0 10.606 4.79 10.606 10.607z"
+        />
+      </svg>
+    </a>
+  </li>
+  {%- endunless %}
+</ul>
