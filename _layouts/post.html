@@ -34,22 +34,24 @@ layout: default
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    {% if page.series %} {% series_links %} {% endif %} {% if page.toc %}
-    <div
-      class="toc-wrapper"
-      style="
-        margin-bottom: 30px;
-        background: #f8f9fa;
-        padding: 16px 20px;
-        border-radius: 8px;
-      "
-    >
-      <h2 style="font-size: 1.2rem; margin: 0 0 10px 0; font-weight: 600">
-        📑 目录
-      </h2>
-      {% toc %}
-    </div>
-    {% endif %} {{ content }}
+    {% if page.series %} {% series_links %} {% endif %} 
+    {% if page.toc and (content contains '<h1' or content contains '<h2' or content contains '<h3') %}
+<div
+  class="toc-wrapper"
+  style="
+    margin-bottom: 30px;
+    background: #f8f9fa;
+    padding: 16px 20px;
+    border-radius: 8px;
+  "
+>
+  <h2 style="font-size: 1.2rem; margin: 0 0 10px 0; font-weight: 600">
+    📑 目录
+  </h2>
+  {% toc %}
+</div>
+{% endif %}
+    {{ content }}
   </div>
 
   <!-- 评论 -->
