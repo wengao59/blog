@@ -228,6 +228,7 @@ exclude:
   - vendor/ruby/
   - _posts/template/ # 👈 加上这一行
   - _posts/待完善的博客文件/ # 或者这样也行
+  - _posts/要完成的任务/
 
 google_site_verification: UJapM2d84iH6w1FVXFWeXhz_PoqtMDTU3mmNjGfRe1E
 # webmaster_verifications:
